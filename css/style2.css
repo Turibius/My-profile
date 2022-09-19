@@ -1,0 +1,172 @@
+.navbar-brand{
+    font-family: Viga;
+    font-size: 32px;
+}
+.navbar{
+    background:linear-gradient(to bottom right, #051622, #1BA098);
+}
+
+.cont-contact{
+    background:linear-gradient(to bottom right, #051622,  #1BA098);
+    background-size: cover;
+    height: 900px;
+    padding: 75px;
+    color: white;
+    cursor: pointer;
+}
+.title{
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 5px 3px 5px rgba(118, 137, 274, 50%);
+}
+footer{
+    background:linear-gradient(to right bottom, #051622, #1BA098);
+    height: 51px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1{
+    position: relative;
+    z-index: 1000;
+    width: 200%;
+    max-width: 1000px;
+    padding: 100px;
+    background: rgba( 255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba( 255, 255, 255, 0.25);
+    border-right: 1px solid rgba( 255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba( 255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+}
+.container1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 100%;
+    height: 100%;
+    background: rgba( 255, 255, 255, 0.05);
+    pointer-events: none;
+    transform: skewX(-15deg);
+}
+.container1 .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.container1 .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 20px;
+}
+.container1 .row100 .col .inputbox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+}
+.container1 .row100 .col .inputbox input,
+.container1 .row100 .col .inputbox textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 10px 0;
+    z-index: 1;
+    color: #000;
+
+}
+.container1 .row100 .col .inputbox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container1 .row100 .col .inputbox input:focus + .text,
+.container1 .row100 .col .inputbox input:valid + .text,
+.container1 .row100 .col .inputbox textarea:focus + .text,
+.container1 .row100 .col .inputbox textarea:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+.container1 .row100 .col .inputbox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.container1 .row100 .col .inputbox input:focus ~ .line,
+.container1 .row100 .col .inputbox input:valid ~ .line{
+    height: 100%;
+}
+.container1 .row100 .col .inputbox .textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.container1 .row100 .col .inputbox textarea:focus ~ .line,
+.container1 .row100 .col .inputbox textarea:valid ~ .line{
+    height: 100%;
+}
+.container1 .row100 .col input[type="submit"]{
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+/* desktop version */
+@media (min-width: 992px) {
+    .navbar-brand, .nav-link{
+        color: aliceblue !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+    .nav-link{
+        text-transform: uppercase;
+        margin-right: 30px;
+    }
+    .nav-link:hover{
+        color: #0B63DC !important;
+    }
+    .nav-link:hover::after{
+        content: '';
+        display: block;
+        border-bottom: 3px solid #0B63DC;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+    .cont-contact{
+        margin-top: -75px;
+    }
+}

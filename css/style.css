@@ -1,0 +1,54 @@
+/* navbar */
+.navbar-brand{
+    font-family: Viga;
+    font-size: 32px;
+}
+.navbar{
+    background:linear-gradient(to bottom right, #051622, #1BA098);
+}
+
+.jumbotron{
+    background:linear-gradient(to bottom right, #051622, #1BA098);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 900px;
+    color: white;
+}
+footer{
+    background:linear-gradient(to bottom right, #051622, #1BA098);
+    height: 51px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* desktop version */
+@media (min-width: 992px) {
+    .navbar-brand, .nav-link{
+        color: aliceblue !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+    .nav-link{
+        text-transform: uppercase;
+        margin-right: 30px;
+    }
+    .nav-link:hover{
+        color: #0B63DC !important;
+    }
+    .nav-link:hover::after{
+        content: '';
+        display: block;
+        border-bottom: 3px solid #0B63DC;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+    .jumbotron{
+        margin-top: -75px;
+    }
+}
